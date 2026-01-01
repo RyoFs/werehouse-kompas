@@ -1,0 +1,85 @@
+body {
+    background-color: #f4f6f9;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    border-color: rgba(255,255,255,0.1);
+}
+
+/* 📦 Card */
+.card {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+/* 🧾 Card Header */
+.card-header {
+    background-color: #f1f5f9 !important;
+    border-bottom: 1px solid #e2e8f0;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* ✍️ Input */
+.form-control,
+.form-select {
+    background-color: #f9fafb;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 0.15rem rgba(37, 99, 235, 0.15);
+}
+
+/* 📊 Table */
+.table thead th {
+    background-color: #f1f5f9;
+    color: #334155;
+}
+
+.table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* 🔘 Button */
+.btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    background-color: #64748b;
+    border-color: #64748b;
+}
+
+.btn-secondary:hover {
+    background-color: #475569;
+}
+
+/* 🧩 Modal */
+.modal-content {
+    border-radius: 12px;
+}
+
+.modal-header {
+    background-color: #2563eb !important;
+    color: #ffffff;
+}
+
+/* 🪶 Text halus */
+.text-muted {
+    color: #64748b !important;
+}

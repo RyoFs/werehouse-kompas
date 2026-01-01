@@ -1,0 +1,12 @@
+.navbar {
+    background: #111827 !important;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.navbar .btn {
+    border-radius: 20px;
+}

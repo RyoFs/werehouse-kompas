@@ -1,0 +1,36 @@
+.sidebar {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #1f2933, #111827);
+    padding: 20px;
+}
+
+.sidebar h6 {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #9ca3af;
+}
+
+.sidebar a {
+    color: #d1d5db;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255,255,255,0.08);
+    color: #fff;
+    transform: translateX(4px);
+}
+
+.sidebar a.active {
+    background: #2563eb;
+    color: #fff;
+    font-weight: 500;
+}
+
+.sidebar .small {
+    font-size: 13px;
+}

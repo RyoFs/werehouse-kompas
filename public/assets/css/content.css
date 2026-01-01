@@ -1,0 +1,16 @@
+.alert {
+    border-radius: 10px;
+}
+
+.table thead th {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.btn {
+    border-radius: 8px;
+}

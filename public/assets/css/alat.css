@@ -1,0 +1,42 @@
+/* Filter Card */
+.filter-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+/* Input & Select */
+.filter-input,
+.filter-select {
+    border-radius: 8px;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    transition: all 0.2s ease-in-out;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.15rem rgba(25, 135, 84, 0.25);
+}
+
+/* Buttons */
+.filter-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.filter-reset {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+/* Label */
+.filter-card .form-label {
+    font-size: 0.9rem;
+    color: #495057;
+}
