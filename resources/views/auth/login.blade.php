@@ -108,7 +108,7 @@
 
         <!-- Footer -->
         <p class="footer">
-            © {{ date('Y') }}. Semua hak cipta dilindungi.
+            © {{ date('Y') }}. By Ryo Fahrezi Sempurna.
         </p>
     </div>
 
