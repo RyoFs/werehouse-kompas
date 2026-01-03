@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Alat extends Model
 {
@@ -27,5 +28,17 @@ class Alat extends Model
     public function getSelisihAttribute()
     {
         return $this->persediaan_awal - $this->persediaan_gudang;
+    }
+
+    protected static function booted()
+    {
+        // Invalidate dashboard cache keys when alat diubah/hapus/ditambah
+        static::saved(function ($model) {
+            Cache::forget('dashboard.totalAlat');
+        });
+
+        static::deleted(function ($model) {
+            Cache::forget('dashboard.totalAlat');
+        });
     }
 }
