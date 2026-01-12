@@ -55,9 +55,9 @@ class PeminjamanExport implements FromCollection, WithHeadings, WithMapping, Sho
             'Tanggal Pinjam',
             'Tanggal Kembali (Rencana)',
             'Tanggal Kembali (Realisasi)',
+            'Daftar Alat',
             'Status',
             'Keterangan',
-            'Daftar Alat',
             'Jumlah Total',
             'Dicatat Oleh',
         ];
@@ -77,9 +77,9 @@ class PeminjamanExport implements FromCollection, WithHeadings, WithMapping, Sho
             $peminjaman->tanggal_pinjam,
             $peminjaman->tanggal_kembali,
             $peminjaman->tanggal_kembali_real,
+            $alat,
             $peminjaman->status,
             $peminjaman->keterangan,
-            $alat,
             $totalQty,
             optional($peminjaman->user)->name,
         ];
@@ -118,7 +118,7 @@ class PeminjamanExport implements FromCollection, WithHeadings, WithMapping, Sho
             ->setHorizontal(Alignment::HORIZONTAL_LEFT)
             ->setVertical(Alignment::VERTICAL_TOP);
         // Wrap text khusus kolom Daftar Alat (H)
-        $sheet->getStyle('H')->getAlignment()->setWrapText(true);
+        $sheet->getStyle('F')->getAlignment()->setWrapText(true);
 
         // Freeze header
         $sheet->freezePane('A2');
@@ -134,9 +134,9 @@ class PeminjamanExport implements FromCollection, WithHeadings, WithMapping, Sho
             'C' => 16, // Tanggal Pinjam
             'D' => 24, // Tgl Kembali Rencana
             'E' => 25, // Tgl Kembali Realisasi
-            'F' => 14, // Status
-            'G' => 25, // Keterangan
-            'H' => 40, // Daftar Alat (DIBATASI)
+            'F' => 43, // Daftar Alat (DIBATASI)
+            'G' => 14, // Status
+            'H' => 25, // Keterangan
             'I' => 14, // Jumlah Total
             'J' => 20, // Dicatat Oleh
         ];

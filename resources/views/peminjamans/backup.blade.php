@@ -49,14 +49,14 @@
                         <label class="form-label fw-semibold">Sampai Tanggal</label>
                         <input type="date" name="date_to" class="form-control">
                     </div>
-
                     {{-- BUTTON --}}
                     <div class="col-12 col-md-3">
                         <button class="btn btn-success w-100">
                             ⬇️ Download Backup
                         </button>
                     </div>
-
+                    <span class="text-muted small">*kosongkan tanggal jika ingin backup semua data <br>*jika ingin mengisi sesuai range tanggal, isi kedua kolom tanggal</span>
+                    
                 </div>
             </form>
 
