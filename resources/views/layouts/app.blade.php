@@ -53,7 +53,8 @@
                     ⚙️ Pengaturan
                 </a>
                 <div class="collapse ms-3" id="submenu">
-                    <a href="{{ route('alat.backup') }}" class="small">📁 Backup Data</a>
+                    <a href="{{ route('alat.backup') }}" class="small">📁 Backup Data Alat</a>
+                    <a href="{{ route('peminjaman.backup') }}" class="small">📁 Backup Data Peminjaman</a>
                     <a href="{{ route('user.index') }}" class="small">👥 Kelola Pengguna</a>
                 </div>
             </div>

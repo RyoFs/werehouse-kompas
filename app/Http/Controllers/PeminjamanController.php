@@ -9,6 +9,8 @@ use App\Models\Log;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Helpers\ActivityLog;
+use App\Exports\PeminjamanExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class PeminjamanController extends Controller
 {
@@ -132,5 +134,37 @@ class PeminjamanController extends Controller
         );
 
         return back()->with('success', 'Pengembalian alat berhasil dicatat.');
+    }
+
+    public function backup()
+    {
+        return view('peminjamans.backup');
+    }
+
+    public function export(Request $request)
+    {
+        $request->validate([
+            'date_type' => 'required|in:tanggal_pinjam,tanggal_kembali,tanggal_kembali_real',
+            'date_from' => 'nullable|date',
+            'date_to'   => 'nullable|date',
+            'format'    => 'nullable|in:xlsx,csv',
+        ]);
+
+        $format = $request->get('format', 'xlsx');
+
+        $filename = 'backup-data-peminjaman-' . now()->format('Y-m-d_H-i-s');
+
+        ActivityLog::add(
+            "Melakukan backup data peminjaman (format: {$format}, filter: {$request->date_type})"
+        );
+
+        return Excel::download(
+            new PeminjamanExport(
+                $request->date_type,
+                $request->date_from,
+                $request->date_to
+            ),
+            $filename . '.' . $format
+        );
     }
 }

@@ -44,7 +44,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/alat/search', [PeminjamanController::class, 'search'])->name('alat.search');
     Route::post('/peminjaman', [PeminjamanController::class, 'store'])->name('peminjaman.store');
     Route::post('/peminjaman/kembalikan/{id}', [PeminjamanController::class, 'kembalikan'])->name('peminjaman.kembalikan');
-
+    Route::get('/peminjaman/export', [PeminjamanController::class, 'export'])->name('peminjaman.export');
+    Route::get('/peminjaman/backup', [PeminjamanController::class, 'backup'])->name('peminjaman.backup');
     Route::get('/logs', [LogController::class, 'index'])->name('logs.index');
 });
 

@@ -26,16 +26,6 @@
 
             <form action="{{ route('alat.export') }}" method="GET">
                 <div class="row g-3 align-items-end">
-
-                    {{-- PILIH FORMAT --}}
-                    <div class="col-12 col-md-4">
-                        <label class="form-label fw-semibold">Format Backup</label>
-                        <select name="format" class="form-select">
-                            <option value="xlsx">Excel (.xlsx)</option>
-                            <option value="csv">CSV (.csv)</option>
-                        </select>
-                    </div>
-
                     {{-- BUTTON --}}
                     <div class="col-12 col-md-3">
                         <button class="btn btn-success w-100">
