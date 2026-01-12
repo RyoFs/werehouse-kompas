@@ -155,7 +155,7 @@ class PeminjamanController extends Controller
         $filename = 'backup-data-peminjaman-' . now()->format('Y-m-d_H-i-s');
 
         ActivityLog::add(
-            "Melakukan backup data peminjaman (format: {$format}, filter: {$request->date_type})"
+            "Melakukan backup data peminjaman filter: {$request->date_type})"
         );
 
         return Excel::download(
