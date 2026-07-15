@@ -1,79 +1,91 @@
 # 📦 Werehouse-Kompas
 
-A web-based warehouse and equipment loan management system built with Laravel. This application helps organizations manage equipment inventory, borrowing, returns, and reporting efficiently through a simple and user-friendly interface.
+Werehouse-Kompas is a web-based equipment borrowing and inventory management system developed for organizational use. The application streamlines equipment inventory, borrowing, returns, availability tracking, and report generation through an intuitive interface.
+
+Built with Laravel, the system provides efficient asset management with Excel/CSV export capabilities and comprehensive filtering for borrowing history.
 
 ---
 
 ## ✨ Features
 
-### Equipment Management
+### 🔐 Authentication
+- Secure user login
+- Session-based authentication
 
-* Add, edit, and delete equipment data
-* Equipment category management
-* Equipment availability tracking
-* Search and filter equipment
+### 📦 Equipment Management
+- Add, edit, and delete equipment
+- Equipment categories
+- Search and filter equipment
+- Equipment image upload
+- Equipment availability tracking
 
-### Borrowing Management
+### 👤 Borrower Management
+- Borrower information management
+- Borrowing history
 
-* Create equipment borrowing requests
-* Record borrower information
-* Borrowing status management
-* Due date management
+### 📋 Borrowing Management
+- Create borrowing transactions
+- Borrow multiple equipment
+- Borrow status management
+- Due date management
 
-### Return Management
+### 🔄 Return Management
+- Equipment return process
+- Actual return date recording
+- Automatic stock availability update
 
-* Record returned equipment
-* Track actual return dates
-* Update equipment availability automatically
+### 📊 Reports
+- Filter reports by:
+  - Borrow Date
+  - Due Date
+  - Actual Return Date
+- Export to Excel (.xlsx)
+- Export to CSV
 
-### Reports
-
-* Filter reports by date
-* Export reports to Excel (.xlsx)
-* Export reports to CSV
-* Printable report support
-
-### Dashboard
-
-* Overview of equipment statistics
-* Active borrowings
-* Returned equipment
-* Equipment availability summary
+### ⚙️ Dashboard
+- Total equipment
+- Active borrowings
+- Returned equipment
+- Equipment availability summary
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Category                | Technology         |
-| ----------------------- | ------------------ |
-| Backend                 | Laravel            |
-| Language                | PHP                |
-| Database                | MySQL              |
-| Frontend                | Blade              |
-| Styling                 | Bootstrap 5        |
-| JavaScript              | JavaScript, jQuery |
-| Development Environment | Laragon            |
-| Package Manager         | Composer, NPM      |
+| Category | Technology |
+|----------|------------|
+| Framework | Laravel 12 |
+| Programming Language | PHP 8.3 |
+| Database | MySQL |
+| Frontend | Blade Template Engine |
+| Styling | HTML5, CSS3, Bootstrap 5 |
+| JavaScript | JavaScript, jQuery |
+| Icons | Bootstrap Icons |
+| Data Export | Laravel Excel (PhpSpreadsheet) |
+| Development Environment | Laragon |
+| Dependency Manager | Composer |
+| Package Manager | NPM |
+| Version Control | Git & GitHub |
 
 ---
 
-## 📸 Screenshots
+## 📸 Application Preview
 
-## Login Page
+### Login
 
-![Dashboard](images/login.png)
+![Login](images/login.png)
 
-## Dashboard
+### Dashboard
 
 ![Dashboard](images/dashboard.png)
 
-## Product Management
+### Equipment Management
 
-![Products](images/alat.png)
+![Equipment](images/alat.png)
 
-## Cashier
+### Borrowing
 
-![Cashier](images/peminjaman.png)
+![Borrowing](images/peminjaman.png)
 
 ---
 
@@ -81,16 +93,33 @@ A web-based warehouse and equipment loan management system built with Laravel. T
 
 ```
 app/
-bootstrap/
-config/
-database/
-public/
+├── Http/
+├── Models/
+├── Exports/
+├── Providers/
+
 resources/
+├── views/
+├── css/
+├── js/
+
 routes/
-storage/
+├── web.php
+
+database/
+├── migrations/
 ```
 
 ---
+
+## 📋 Requirements
+
+- PHP 8.3+
+- Composer
+- Node.js
+- NPM
+- MySQL
+- Laragon (recommended)
 
 ## 🚀 Installation
 
@@ -160,20 +189,33 @@ http://localhost/werehouse-kompas/public
 
 ---
 
-## 📊 Export Features
+## 📊 Report Export
 
-The application supports exporting reports in:
+The reporting module supports:
 
-* Microsoft Excel (.xlsx)
-* CSV (.csv)
+- Excel (.xlsx)
+- CSV (.csv)
 
-Reports can be filtered using:
+Available filters:
 
-* Borrow Date
-* Due Date
-* Actual Return Date
+- Borrow Date
+- Due Date
+- Actual Return Date
+
+Designed to simplify administrative reporting and documentation.
 
 ---
+
+## 🚀 Key Highlights
+
+- Responsive web application
+- Equipment inventory management
+- Borrowing & return workflow
+- Excel & CSV export
+- Advanced report filtering
+- User authentication
+- Clean and responsive Bootstrap interface
+- Built with Laravel MVC architecture
 
 ## 📁 License
 
@@ -191,7 +233,9 @@ This project is intended for educational and portfolio purposes.
 
 If you find this project helpful, feel free to give it a ⭐ on GitHub.
 
-![Laravel](https://img.shields.io/badge/Laravel-12-red)
-![PHP](https://img.shields.io/badge/PHP-8.3-blue)
-![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
-![License](https://img.shields.io/badge/License-MIT-blue)
+![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-8.3-777BB4?logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&logoColor=white)
+![jQuery](https://img.shields.io/badge/jQuery-0769AD?logo=jquery&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
