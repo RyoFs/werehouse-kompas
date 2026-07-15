@@ -191,7 +191,7 @@ This project is intended for educational and portfolio purposes.
 
 If you find this project helpful, feel free to give it a ⭐ on GitHub.
 
-![Laravel](https://img.shields.io/badge/Laravel-10-red)
+![Laravel](https://img.shields.io/badge/Laravel-12-red)
 ![PHP](https://img.shields.io/badge/PHP-8.3-blue)
 ![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
 ![License](https://img.shields.io/badge/License-MIT-blue)
