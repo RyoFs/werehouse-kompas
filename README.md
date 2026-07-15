@@ -1,59 +1,192 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📦 Werehouse-Kompas
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A web-based warehouse and equipment loan management system built with Laravel. This application helps organizations manage equipment inventory, borrowing, returns, and reporting efficiently through a simple and user-friendly interface.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Equipment Management
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* Add, edit, and delete equipment data
+* Equipment category management
+* Equipment availability tracking
+* Search and filter equipment
 
-## Learning Laravel
+### Borrowing Management
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+* Create equipment borrowing requests
+* Record borrower information
+* Borrowing status management
+* Due date management
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Return Management
 
-## Laravel Sponsors
+* Record returned equipment
+* Track actual return dates
+* Update equipment availability automatically
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Reports
 
-### Premium Partners
+* Filter reports by date
+* Export reports to Excel (.xlsx)
+* Export reports to CSV
+* Printable report support
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Dashboard
 
-## Contributing
+* Overview of equipment statistics
+* Active borrowings
+* Returned equipment
+* Equipment availability summary
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🛠️ Tech Stack
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+| Category                | Technology         |
+| ----------------------- | ------------------ |
+| Backend                 | Laravel            |
+| Language                | PHP                |
+| Database                | MySQL              |
+| Frontend                | Blade              |
+| Styling                 | Bootstrap 5        |
+| JavaScript              | JavaScript, jQuery |
+| Development Environment | Laragon            |
+| Package Manager         | Composer, NPM      |
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 📸 Screenshots
 
-## License
+## Login Page
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![Dashboard](images/login.png)
+
+## Dashboard
+
+![Dashboard](images/dashboard.png)
+
+## Product Management
+
+![Products](images/alat.png)
+
+## Cashier
+
+![Cashier](images/peminjaman.png)
+
+---
+
+## 📂 Project Structure
+
+```
+app/
+bootstrap/
+config/
+database/
+public/
+resources/
+routes/
+storage/
+```
+
+---
+
+## 🚀 Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/werehouse-kompas.git
+```
+
+### 2. Open the project
+
+```bash
+cd werehouse-kompas
+```
+
+### 3. Install dependencies
+
+```bash
+composer install
+npm install
+```
+
+### 4. Copy environment file
+
+```bash
+cp .env.example .env
+```
+
+### 5. Generate application key
+
+```bash
+php artisan key:generate
+```
+
+### 6. Configure database
+
+Edit the `.env` file.
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 7. Run migrations
+
+```bash
+php artisan migrate
+```
+
+### 8. Build frontend assets
+
+```bash
+npm run build
+```
+
+### 9. Start the application
+
+Using Laragon, simply start Apache and MySQL, then open:
+
+```
+http://localhost/werehouse-kompas/public
+```
+
+---
+
+## 📊 Export Features
+
+The application supports exporting reports in:
+
+* Microsoft Excel (.xlsx)
+* CSV (.csv)
+
+Reports can be filtered using:
+
+* Borrow Date
+* Due Date
+* Actual Return Date
+
+---
+
+## 📁 License
+
+This project is intended for educational and portfolio purposes.
+
+---
+
+## 👨‍💻 Author
+
+**Ryo Fahrezi**
+
+* Laravel Developer
+* PHP Developer
+* Web Application Developer
+
+If you find this project helpful, feel free to give it a ⭐ on GitHub.
